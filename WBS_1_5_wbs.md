@@ -1,6 +1,6 @@
 ```mermaid
 
-flowchart TB
+flowchart LR
 
 subgraph "第1階層"
 
@@ -25,7 +25,7 @@ end
 
 subgraph "第3階層"
 
-    kome_tin["米を炊く"]
+    kome_tin["米を温める"]
 
     misosiru_boil["お湯を沸かす"]
 
@@ -54,6 +54,8 @@ subgraph "第3階層"
     tukemono_mix["浅漬けの素と野菜を混ぜる"]
 
     tukemono_atu["重しをのせる"]
+
+    tukemono_end["漬物を盛り付ける"]
 
     dezato_mix["牛乳とフルーチェの素を混ぜる"]
 
@@ -89,6 +91,8 @@ subgraph "第4階層"
 
     huruche["フルーチェの素"]
 
+    water["水"]
+
 
 
 
@@ -115,11 +119,47 @@ misosiru--->misosiru_boil
 misosiru--->misosiru_cut
 misosiru--->misosiru_in
 misosiru--->misosiru_miso
+misosiru--->misosiru_end
 
+syouga--->syouga_haku
+syouga--->syouga_bake
+syouga--->syouga_cut
+syouga--->syouga_in
+syouga--->syouga_bake2
+syouga--->syouga_end
 
+tukemono--->tukemono_cut
+tukemono--->tukemono_mix
+tukemono--->tukemono_atu
 
+dezato--->dezato_mix
+dezato--->dezato_end
 
- 
+%% 第3階層から第4階層へ
+
+dezato_mix--->gyunyu
+dezato_mix--->huruche
+
+kome_tin--->hakumai
+
+misosiru_boil--->water
+misosiru_cut--->touhu
+misosiru_cut--->negi
+misosiru_in--->touhu
+misosiru_in--->negi
+misosiru_in--->wakame
+misosiru_miso--->miso
+
+syouga_haku--->buta
+syouga_haku--->hakuriki
+syouga_bake--->buta
+syouga_in--->tare
+syouga_cut--->kyabetu
+syouga_bake2--->buta
+
+tukemono_cut--->kyuuri
+tukemono_mix--->asaduke
+tukemono_mix--->kyuuri
 ```
 
 
