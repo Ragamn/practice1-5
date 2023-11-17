@@ -35,7 +35,7 @@ subgraph "第3階層"
 
     misosiru_miso["味噌を溶かす"]
 
-    misosiru_end["味噌汁を盛り付ける"]
+    misosiru_kansei["味噌汁を盛り付ける"]
 
     syouga_haku["肉に薄力粉にまぶす"]
 
@@ -47,7 +47,7 @@ subgraph "第3階層"
 
     syouga_bake2["肉焼く2"]
 
-    syouga_end["肉と野菜を盛り付ける"]
+    syouga_kansei["肉と野菜を盛り付ける"]
 
     tukemono_cut["野菜を切る"]
 
@@ -55,11 +55,11 @@ subgraph "第3階層"
 
     tukemono_atu["重しをのせる"]
 
-    tukemono_end["漬物を盛り付ける"]
+    tukemono_kansei["漬物を盛り付ける"]
 
     dezato_mix["牛乳とフルーチェの素を混ぜる"]
 
-    dezato_end["フルーチェを盛り付ける"]
+    dezato_kansei["フルーチェを盛り付ける"]
 
 end
 
@@ -119,21 +119,21 @@ misosiru--->misosiru_boil
 misosiru--->misosiru_cut
 misosiru--->misosiru_in
 misosiru--->misosiru_miso
-misosiru--->misosiru_end
+misosiru--->misosiru_kansei
 
 syouga--->syouga_haku
 syouga--->syouga_bake
 syouga--->syouga_cut
 syouga--->syouga_in
 syouga--->syouga_bake2
-syouga--->syouga_end
+syouga--->syouga_kansei
 
 tukemono--->tukemono_cut
 tukemono--->tukemono_mix
 tukemono--->tukemono_atu
 
 dezato--->dezato_mix
-dezato--->dezato_end
+dezato--->dezato_kansei
 
 %% 第3階層から第4階層へ
 
